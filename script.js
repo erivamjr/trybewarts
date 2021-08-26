@@ -20,4 +20,3 @@ if (agreeInput.checked === true) {
 function validationSubmit() {
   console.log('Passei aqui');
 }
-
