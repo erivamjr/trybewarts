@@ -16,7 +16,7 @@ function validation() {
 
 btnEnter.addEventListener('click', validation);
 
-// Requisito 18
+// Requisito-18
 
 btnSubmit.disabled = true;
 function validationSubmit() {
