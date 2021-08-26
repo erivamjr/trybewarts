@@ -29,35 +29,32 @@ function validation() {
 
 btnEnter.addEventListener('click', validation);
 
-<<<<<<< HEAD
 textArea.addEventListener('input', () => {
-=======
-// Requisito-18
+  // Requisito-18
 
-btnSubmit.disabled = true;
-function validationSubmit() {
-  if (agreeInput.checked === true) {
-    console.log(agreeInput.checked);
-    btnSubmit.disabled = false;
-  } else {
-    console.log(agreeInput.checked);
-    btnSubmit.disabled = true;
+  btnSubmit.disabled = true;
+  function validationSubmit() {
+    if (agreeInput.checked === true) {
+      console.log(agreeInput.checked);
+      btnSubmit.disabled = false;
+    } else {
+      console.log(agreeInput.checked);
+      btnSubmit.disabled = true;
+    }
   }
-}
-agreeInput.addEventListener('click', validationSubmit);
+  agreeInput.addEventListener('click', validationSubmit);
 
-textArea.addEventListener('keyup', () => {
->>>>>>> 01ac0ba6761b5fbb7c0e2d43f3002572cf243cb6
-  const maxLength = 500;
-  const counter = maxLength - textArea.value.length;
-  counterDisplay.innerHTML = counter;
-});
+  textArea.addEventListener('keyup', () => {
+    const maxLength = 500;
+    const counter = maxLength - textArea.value.length;
+    counterDisplay.innerHTML = counter;
+  });
 
-btnSubmit.addEventListener('click', (event) => {
-  event.preventDefault();
-  form.innerHTML = '';
-  const p = document.createElement('p');
-  p.innerHTML = `Nome: ${name.value} ${lastName.value};
+  btnSubmit.addEventListener('click', (event) => {
+    event.preventDefault();
+    form.innerHTML = '';
+    const p = document.createElement('p');
+    p.innerHTML = `Nome: ${name.value} ${lastName.value};
   Email: ${email.value} Casa: ${house.value} Família: ${familyChecked};`
-  form.appendChild(p);
-});
+    form.appendChild(p);
+  });
