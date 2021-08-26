@@ -3,6 +3,8 @@ const password = document.getElementById('password');
 const btnEnter = document.getElementById('btn-enter');
 const btnSubmit = document.getElementById('submit-btn');
 const agreeInput = document.getElementById('agreement');
+const textArea = document.getElementById('textarea');
+const counterDisplay = document.querySelector('#counter');
 
 function validation() {
   if (email.value === 'tryber@teste.com' && password.value === '123456') {
@@ -27,3 +29,9 @@ function validationSubmit() {
   }
 }
 agreeInput.addEventListener('click', validationSubmit);
+
+textArea.addEventListener('keyup', () => {
+  const maxLength = 500;
+  const counter = maxLength - textArea.value.length;
+  counterDisplay.innerHTML = counter;
+});
