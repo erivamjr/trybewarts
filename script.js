@@ -1,4 +1,4 @@
-const email = document.getElementById('input-email');
+const emailLogin = document.getElementById('email-login');
 const password = document.getElementById('password');
 const btnEnter = document.getElementById('btn-enter');
 const btnSubmit = document.getElementById('submit-btn');
@@ -9,6 +9,7 @@ const counterDisplay = document.getElementById('counter');
 
 const name = document.getElementById('input-name');
 const lastName = document.getElementById('input-lastname');
+const email = document.getElementById('input-email');
 const house = document.getElementById('house');
 const subjects = document.getElementsByClassName('subject');
 
@@ -16,7 +17,7 @@ const form = document.getElementById('evaluation-form');
 let selected = '';
 
 function validation() {
-  if (email.value === 'tryber@teste.com' && password.value === '123456') {
+  if (emailLogin.value === 'tryber@teste.com' && password.value === '123456') {
     alert('Olá, Tryber!');
   } else {
     alert('Email ou senha inválidos.');
@@ -52,7 +53,7 @@ btnSubmit.addEventListener('click', (event) => {
   const rate = document.querySelector('input[name=rate]:checked');
   for (let key = 0; key < subjects.length; key += 1) {
     if (subjects[key].checked) {
-      selected = `${selected + subjects[key].value} `;
+      selected = `${selected} ${subjects[key].value}, `;
     }
   }
   const arrayInformation = [`Nome: ${name.value} ${lastName.value}`, `Email: ${email.value}`,
